@@ -1,0 +1,40 @@
+{
+  "snapshot_date": "2026-11-18",
+  "source_files": [
+    {
+      "path": "config.py",
+      "sha256": "71aa80afe7df16acc6af90748ecc5a47358e2b0cc183e7555e432c04077a534e",
+      "bytes": 6415
+    },
+    {
+      "path": "common/crisisdynnet.py",
+      "sha256": "740cb1280cdfbf73ed66b0fede0a4fe32e28192d0d6a90f9c424812a19b99cb2",
+      "bytes": 17441
+    },
+    {
+      "path": "common/baselines.py",
+      "sha256": "22d20c8c5838e7391705c4995318f3d75ff5e775948241e0291980ee0850e0f6",
+      "bytes": 8234
+    },
+    {
+      "path": "pipeline/08_cohort_framework.py",
+      "sha256": "9b4f3170e79a9ad5a177872b43cfb0607a9ab1a746741b2044ce0e76d3d8381e",
+      "bytes": 28052
+    },
+    {
+      "path": "pipeline/14_subtype_dynamics.py",
+      "sha256": "86cda87793c34b4a09e02dd73b775147469d0cd5b3a719cb53fcf4e63976d23a",
+      "bytes": 8665
+    },
+    {
+      "path": "tools/check_data.py",
+      "sha256": "c853a3ca4f098b691374b2e6524bdd9d567849888c42536f5440c23c527e5a6f",
+      "bytes": 12435
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "6e7c1a070e0545a4642a054792c3d72de8ce8f9158e60dfe895a09f95be278f7",
+      "bytes": 855
+    }
+  ]
+}

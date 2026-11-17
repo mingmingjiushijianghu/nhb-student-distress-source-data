@@ -1,0 +1,27 @@
+# CrisisDynNet 分析代码依赖（在 D:\envs\nhb_crisis 中已全部装好）
+# 用法： pip install -r requirements.txt
+# torch 建议按官方命令装对应 CUDA 版本；tigramite / hmmlearn 有时需要编译工具链。
+
+# --- 基础 ---
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+
+# --- 结构方程/因果/序列模型（04 基准、08 框架、09 检验力）---
+tigramite>=5.2          # PCMCI 基线
+hmmlearn                # HMM 基线
+torch                   # GRU/LSTM 基线（有 GPU 时用 CUDA 版）
+
+# --- 文件格式 ---
+pyarrow                 # 读 .parquet（PSYCHE-D、缓存）
+openpyxl                # 读 .xlsx（新乡量表、ECSMP scale.xlsx）
+tabulate                # 11_report.py 的 to_markdown
+
+# --- 稿件生成（13）---
+python-docx
+
+# --- 可选：run_all.py 的锁文件进程检查 ---
+psutil

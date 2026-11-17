@@ -1,0 +1,592 @@
+{
+  "academic_calendar": {
+    "cols": [
+      "date",
+      "day",
+      "period",
+      "weekend"
+    ],
+    "key": [
+      "date"
+    ],
+    "dates": [
+      "date"
+    ],
+    "cats": {
+      "period": [
+        "examination",
+        "golden_week",
+        "national_holiday",
+        "other",
+        "teaching",
+        "vacation",
+        "winter_break"
+      ],
+      "weekend": [
+        0,
+        1
+      ]
+    },
+    "note": "实际校历；date 为自然日，day 为研究第几天（0 起）"
+  },
+  "screening_baseline": {
+    "cols": [
+      "screen_id",
+      "screen_date",
+      "sex",
+      "age",
+      "grade",
+      "phq9_1",
+      "phq9_2",
+      "phq9_3",
+      "phq9_4",
+      "phq9_5",
+      "phq9_6",
+      "phq9_7",
+      "phq9_8",
+      "phq9_9",
+      "gad7_1",
+      "gad7_2",
+      "gad7_3",
+      "gad7_4",
+      "gad7_5",
+      "gad7_6",
+      "gad7_7",
+      "mean_item_time_s",
+      "enrolled",
+      "referred_clinical"
+    ],
+    "key": [
+      "screen_id"
+    ],
+    "dates": [
+      "screen_date"
+    ],
+    "ranges": {
+      "phq9_1": [
+        0,
+        3
+      ],
+      "phq9_2": [
+        0,
+        3
+      ],
+      "phq9_3": [
+        0,
+        3
+      ],
+      "phq9_4": [
+        0,
+        3
+      ],
+      "phq9_5": [
+        0,
+        3
+      ],
+      "phq9_6": [
+        0,
+        3
+      ],
+      "phq9_7": [
+        0,
+        3
+      ],
+      "phq9_8": [
+        0,
+        3
+      ],
+      "phq9_9": [
+        0,
+        3
+      ],
+      "gad7_1": [
+        0,
+        3
+      ],
+      "gad7_2": [
+        0,
+        3
+      ],
+      "gad7_3": [
+        0,
+        3
+      ],
+      "gad7_4": [
+        0,
+        3
+      ],
+      "gad7_5": [
+        0,
+        3
+      ],
+      "gad7_6": [
+        0,
+        3
+      ],
+      "gad7_7": [
+        0,
+        3
+      ],
+      "age": [
+        15,
+        45
+      ],
+      "mean_item_time_s": [
+        0,
+        7200
+      ]
+    },
+    "cats": {
+      "sex": [
+        "F",
+        "M",
+        "female",
+        "male",
+        "女",
+        "男"
+      ]
+    },
+    "note": "筛查池每人一行"
+  },
+  "participants": {
+    "cols": [
+      "pid",
+      "screen_id",
+      "sex",
+      "age",
+      "grade",
+      "final_year",
+      "major",
+      "only_child",
+      "hometown",
+      "family_income_band",
+      "bmi",
+      "enrolment_stratum",
+      "enrolment_date",
+      "last_contact_date",
+      "withdrawn"
+    ],
+    "key": [
+      "pid"
+    ],
+    "dates": [
+      "enrolment_date",
+      "last_contact_date"
+    ],
+    "ranges": {
+      "age": [
+        15,
+        45
+      ],
+      "bmi": [
+        12,
+        60
+      ]
+    },
+    "note": "入组每人一行；final_year / withdrawn 用 0/1 或布尔"
+  },
+  "daily_ema": {
+    "cols": [
+      "pid",
+      "date",
+      "response_time",
+      "low_mood",
+      "anxious",
+      "stress",
+      "sleep_quality",
+      "social_contact",
+      "life_event",
+      "life_event_domain"
+    ],
+    "key": [
+      "pid",
+      "date"
+    ],
+    "dates": [
+      "date"
+    ],
+    "ranges": {
+      "low_mood": [
+        0,
+        100
+      ],
+      "anxious": [
+        0,
+        100
+      ],
+      "stress": [
+        0,
+        100
+      ],
+      "sleep_quality": [
+        1,
+        5
+      ],
+      "social_contact": [
+        1,
+        5
+      ],
+      "life_event": [
+        0,
+        2
+      ]
+    },
+    "note": "人 × 作答日；情绪/压力 0–100，睡眠与社交 1–5，生活事件 0/1/2"
+  },
+  "weekly_phq4": {
+    "cols": [
+      "pid",
+      "week",
+      "date",
+      "gad_1",
+      "gad_2",
+      "phq_1",
+      "phq_2"
+    ],
+    "key": [
+      "pid",
+      "week"
+    ],
+    "dates": [
+      "date"
+    ],
+    "ranges": {
+      "gad_1": [
+        0,
+        3
+      ],
+      "gad_2": [
+        0,
+        3
+      ],
+      "phq_1": [
+        0,
+        3
+      ],
+      "phq_2": [
+        0,
+        3
+      ]
+    },
+    "note": "人 × 作答周（每周日）"
+  },
+  "daily_wearable": {
+    "cols": [
+      "pid",
+      "date",
+      "wear_minutes",
+      "resting_hr",
+      "rmssd_night",
+      "sleep_minutes",
+      "sleep_onset",
+      "steps",
+      "scl_day_mean",
+      "scr_per_hour"
+    ],
+    "key": [
+      "pid",
+      "date"
+    ],
+    "dates": [
+      "date"
+    ],
+    "ranges": {
+      "wear_minutes": [
+        0,
+        1440
+      ],
+      "resting_hr": [
+        25,
+        200
+      ],
+      "rmssd_night": [
+        1,
+        400
+      ],
+      "sleep_minutes": [
+        0,
+        1440
+      ],
+      "steps": [
+        0,
+        100000
+      ],
+      "scl_day_mean": [
+        0,
+        100
+      ],
+      "scr_per_hour": [
+        0,
+        500
+      ]
+    },
+    "note": "人 × 日；不佩戴/充电造成的缺失保留为空值，不要填 0"
+  },
+  "wave_questionnaires": {
+    "cols": [
+      "pid",
+      "wave",
+      "date",
+      "phq9_1",
+      "phq9_2",
+      "phq9_3",
+      "phq9_4",
+      "phq9_5",
+      "phq9_6",
+      "phq9_7",
+      "phq9_8",
+      "phq9_9",
+      "gad7_1",
+      "gad7_2",
+      "gad7_3",
+      "gad7_4",
+      "gad7_5",
+      "gad7_6",
+      "gad7_7",
+      "pss14_total",
+      "isi_total"
+    ],
+    "key": [
+      "pid",
+      "wave"
+    ],
+    "dates": [
+      "date"
+    ],
+    "ranges": {
+      "phq9_1": [
+        0,
+        3
+      ],
+      "phq9_2": [
+        0,
+        3
+      ],
+      "phq9_3": [
+        0,
+        3
+      ],
+      "phq9_4": [
+        0,
+        3
+      ],
+      "phq9_5": [
+        0,
+        3
+      ],
+      "phq9_6": [
+        0,
+        3
+      ],
+      "phq9_7": [
+        0,
+        3
+      ],
+      "phq9_8": [
+        0,
+        3
+      ],
+      "phq9_9": [
+        0,
+        3
+      ],
+      "gad7_1": [
+        0,
+        3
+      ],
+      "gad7_2": [
+        0,
+        3
+      ],
+      "gad7_3": [
+        0,
+        3
+      ],
+      "gad7_4": [
+        0,
+        3
+      ],
+      "gad7_5": [
+        0,
+        3
+      ],
+      "gad7_6": [
+        0,
+        3
+      ],
+      "gad7_7": [
+        0,
+        3
+      ],
+      "pss14_total": [
+        0,
+        56
+      ],
+      "isi_total": [
+        0,
+        28
+      ]
+    },
+    "cats": {
+      "wave": [
+        "T0",
+        "T1",
+        "T2"
+      ]
+    },
+    "note": "人 × 波次（T0/T1/T2）"
+  },
+  "counselor_assessments": {
+    "cols": [
+      "pid",
+      "wave",
+      "date",
+      "counselor_id",
+      "cgi_s",
+      "crisis_level",
+      "si_screen_positive",
+      "double_rated"
+    ],
+    "key": [
+      "pid",
+      "wave"
+    ],
+    "dates": [
+      "date"
+    ],
+    "ranges": {
+      "cgi_s": [
+        1,
+        7
+      ],
+      "crisis_level": [
+        0,
+        2
+      ]
+    },
+    "cats": {
+      "wave": [
+        "T0",
+        "T1",
+        "T2"
+      ]
+    },
+    "note": "人 × 波次；双评时 double_rated=1"
+  },
+  "crisis_events": {
+    "cols": [
+      "pid",
+      "onset_date_est",
+      "detected_date",
+      "detection_route",
+      "severity",
+      "counselor_confirmed"
+    ],
+    "key": null,
+    "dates": [
+      "onset_date_est",
+      "detected_date"
+    ],
+    "cats": {
+      "detection_route": [
+        "counselor_referral",
+        "other",
+        "scheduled_wave",
+        "self_referral"
+      ]
+    },
+    "note": "每次确认危机一行；detected_date ≥ onset_date_est"
+  },
+  "lab_sessions": {
+    "cols": [
+      "pid",
+      "wave",
+      "task_accuracy",
+      "task_mean_rt_ms",
+      "vas_stress_pre",
+      "vas_stress_post",
+      "n_bad_eeg_channels",
+      "room_temp_c",
+      "session_start_clock"
+    ],
+    "key": [
+      "pid",
+      "wave"
+    ],
+    "ranges": {
+      "task_accuracy": [
+        0,
+        1
+      ],
+      "vas_stress_pre": [
+        0,
+        100
+      ],
+      "vas_stress_post": [
+        0,
+        100
+      ]
+    },
+    "cats": {
+      "wave": [
+        "T0",
+        "T1",
+        "T2"
+      ]
+    },
+    "note": "人 × 波次；MIST 行为与主观压力"
+  },
+  "lab_epochs": {
+    "cols": [
+      "pid",
+      "wave",
+      "phase",
+      "epoch",
+      "fm_theta_log",
+      "post_alpha_log",
+      "faa",
+      "hr_bpm",
+      "rmssd_ms",
+      "scl_us",
+      "scr_count",
+      "eeg_quality"
+    ],
+    "key": [
+      "pid",
+      "wave",
+      "phase",
+      "epoch"
+    ],
+    "ranges": {
+      "hr_bpm": [
+        25,
+        220
+      ],
+      "rmssd_ms": [
+        0,
+        400
+      ],
+      "scl_us": [
+        0,
+        100
+      ],
+      "eeg_quality": [
+        0,
+        1
+      ]
+    },
+    "cats": {
+      "wave": [
+        "T0",
+        "T1",
+        "T2"
+      ],
+      "phase": [
+        "recovery",
+        "rest",
+        "stress"
+      ]
+    },
+    "note": "人 × 波次 × 10 s 时段；phase ∈ rest/stress/recovery"
+  }
+}
